@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>Worker Finder</title>
+
+    </head>
+    <body>
+        <header>
+            <div>
+                <h1>Worker Finder</h1>
+            </div>
+        </header>
+        <main>
+            <form action="{{ url_for('queries')}}" method="post">            
+                <select name="country" size="3">
+                    <option value="Mexico">Mexico</option>
+                    <option value="Colombia">Colombia</option>
+                    <option value="Argentina">Argentina</option>
+                    <option value="Chile">Chile</option>
+                    <option value="Russian Federation">Russian Federation</option>
+                </select>
+                <div class="slidecontainer">
+                    <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+                </div>
+                <div class="role-type">
+                    <input type="checkbox" id="role1" name="role" value="Designer">
+                    <label for="role1">Designer</label><br>
+                    <input type="checkbox" id="role2" name="role" value="Architect">
+                    <label for="role2">Architect</label><br>
+                    <input type="checkbox" id="role3" name="role" value="Manager">
+                    <label for="role3">Manager</label><br>
+                    <input type="checkbox" id="role4" name="role" value="Dietitian">
+                    <label for="role3">Dietitian</label><br>
+                </div>
+                <div>
+                    <h2>Experience</h2>
+                    <input type="radio" id="trainee" name="experience" value="trainee">
+                    <label for="trainee">Less than 1 year</label><br>
+                    <input type="radio" id="jr" name="experience" value="jr">
+                    <label for="jr">1 to 3 years</label><br>
+                    <input type="radio" id="mid" name="experience" value="mid">
+                    <label for="mid">3 to 5 years</label><br>
+                    <input type="radio" id="sr" name="experience" value="sr">
+                    <label for="sr">More than 5 years</label><br>
+                </div>
+                <input type="submit" value="Enviar" />
+            </form>
+        </main>
+    </body>
+</html>
